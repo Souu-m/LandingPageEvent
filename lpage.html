@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTalk</title>
+    <link rel="stylesheet" href="lpage.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+    
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <h2><span style="color:#226A80 ;">Tech</span><span style="color: white;">Talk</span></h2>
+   <div class="navigation">
+     <a href="#">Contact</a>
+   </div>
+    </header>
+    
+    <section>
+  
+      <div class="content">
+        <div class="info">
+          <h2>Tech Talk Conference <br></h2>
+          <p style="color: white;"> 
+            Join us at the forefront of technology during our Tech Talk Conference. Explore the latest advancements, deepen your understanding, and build connections with industry leaders. Elevate your professional insights and secure your spot for an unparalleled experience and more details.
+          </p>
+          
+          <button class="info-btn" onclick="location.href='https://forms.gle/rdd11QkA495RRayX9'">Register</button>
+        </div>
+      </div>
+       
+      </div>
+      <div class="content2">
+        <div class="section__container memories__container">
+          <h2>Speakers</h2>
+          <div class="memories__grid">
+            <div class="memories__card">
+              <span><i class="ri-user-line"></i></span>
+              <h4 style="color: azure;">X</h4>
+              <p style="color: white;">
+                X is a renowned expert in artificial intelligence and machine learning. With years of experience, he has contributed significantly to the development of cutting-edge technologies.
+              </p>
+            </div>
+            <div class="memories__card">
+              <span><i class="ri-user-line"></i></span>
+              <h4 style="color: azure;">Y</h4>
+              <p style="color: white;">
+                Y, a visionary entrepreneur, is known for her innovative approach to business and technology. She has successfully founded and led multiple tech startups.
+              </p>
+            </div>
+            <div class="memories__card">
+              <span><i class="ri-user-line"></i></span>>
+              <h4 style="color: azure;">Z</h4>
+              <p style="color: white;">
+                Z is a cybersecurity expert with a passion for enhancing digital security. He has worked on various projects to combat cyber threats and protect user data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    </section>
+    
+    <footer>   
+      <div class="countdown-container">
+       
+        <div class="countdown">
+          <span class="days">00</span>
+          <span class="small-text">Days</span>
+          <span class="hours">00</span>
+          <span class="small-text">Hours</span>
+          <span class="minutes">00</span>
+          <span class="small-text">Minutes</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    onclick="location.href='https://docs.google.com/forms/d/e/1FAIpQLSeeTAxjyXZAcsrnCgX_9TC7PPam0FtqLTOdbah61ZiTcMqUcQ/viewform?usp=sf_link'"
+
+    // Set the target event date and time (replace with your actual values)
+const targetDate = new Date("2024-01-01 10:00:00");
+
+// No need for a pre-defined target date, get the current date first
+const today = new Date();
+
+// Set the future event date and time (replace with your actual values)
+const eventDate = new Date("2024-01-09 10:00:00");
+
+function countdown() {
+  const now = new Date().getTime();
+  let distance = eventDate - now;
+
+  // Check if event has already occurred, handle accordingly
+  if (distance < 0) {
+    distance = 0;
+    document.querySelector(".countdown-container").textContent = "Event has already occurred!";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  document.querySelector(".days").textContent = days;
+  document.querySelector(".hours").textContent = hours;
+  document.querySelector(".minutes").textContent = minutes;
+
+  if (distance > 0) {
+    setTimeout(countdown, 1000);
+  } else {
+    // Event has started! You can add actions here for when the countdown reaches 0.
+  }
+}
+
+countdown();
+
+
+
+  </script>
+</html>
